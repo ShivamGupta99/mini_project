@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select random number</title>
+</head>
+
+<body>
+    <div id="show">
+        <button onclick="play()">Click</button>
+    </div>
+    <div id="container">
+
+    </div>
+    <script>
+        let play = () => {
+            let random = Math.floor(Math.random() * 100);
+            let num = 0;
+            var chance = 0;
+            while (num != random) {
+                num = prompt("Enter value ");
+                if (num > random) {
+                    document.getElementById("container").innerText="Give lesser number";
+                    // console.log("Give lesser number")
+                }
+                else if (num == random) {
+                    document.getElementById("container").innerText="Congrulation you won the match";
+                    // console.log("Congrulation you won the match")
+                }
+                else {
+                    document.getElementById("container").innerText="Give more number";
+                    // console.log("Give more number")
+                }
+                chance++;
+            }
+            // console.log(`After ${chance} chance you won the match`);
+        }
+
+
+    </script>
+</body>
+
+</html>

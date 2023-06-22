@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: rgb(216, 206, 206);
+        }
+
+        .container {
+            min-width: 300px;
+            min-height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <label for="">Color</label>
+    <input type="color" name="color" id="color">
+    <div class="container" id="container">
+        <div class="box">
+            Hey, I am your div container
+        </div>
+    </div>
+    <script>
+        let color = document.getElementById('color');
+        color.addEventListener('input', function (e) {
+            console.log(this.value);
+            document.body.style.backgroundColor = this.value;
+            // document.getElementById('container').style.backgroundColor=this.value;
+        })
+        // console.log(color);
+    </script>
+</body>
+
+</html>
